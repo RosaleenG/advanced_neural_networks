@@ -1,0 +1,30 @@
+For this project, the data is a set of images from the online shopping website Zalando. Images are divided into 4 classes: shoes, boots, tshirts and shirts. The aim is to build a classifier using keras that can automatically predict the right class for a given image. 
+To make it easier, images are already loaded into a numpy array (as a tensor with dimension (N, 28, 28) where images are 28x28 pixels). 
+
+This dataset is adapted from the Fashion MNIST dataset from Zalando.
+
+It consists of a series of images corresponding to items of clothing.
+
+You will need to build a model using Neural Networks to classify them automatically.
+
+Get the data
+The data provided consists of three files:
+
+X_train.npy: the training set as a numpy array of dimension (N, 28, 28). It corresponds to N images of 28*28 pixels in gray scale.
+You can load the dataset in a notebook with numpy:
+
+X_train = np.load("data/X_train.npy")
+You can visualise a given image by passing a row of the matrix to maplotlib.pyplot.imshow:
+
+plt.imshow(X_train[0], cmap="gray")
+y_train.npy: A numpy array of dimension (N,) that corresponds to the labels of the images stored in X_train. The labels are the following:
+0: Sneaker
+1: Boot
+2: Shirt
+3: T-shirt
+That's a 4 classes classification problem.
+
+X_test.npy: A sample test array to test your model locally.
+Get Started
+You will need to implement the function build_model in model.py and use the run.py to train your model and save its state to a file.
+
